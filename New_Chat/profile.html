@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - ChatApp</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">ChatApp</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="chat.html">Back to Chat</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="profile-content">
+            <div class="auth-form-container profile-container">
+                <h2>Your Profile</h2>
+                <div id="profile-message" class="message"></div>
+                
+                <div class="profile-avatar">
+                    <img id="current-avatar" src="/placeholder.svg?height=100&width=100" alt="Your avatar">
+                    <div class="avatar-upload">
+                        <label for="avatar-upload" class="btn btn-secondary btn-sm">Change Avatar</label>
+                        <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                
+                <form id="profile-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+                
+                <div class="password-change">
+                    <h3>Change Password</h3>
+                    <form id="password-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" name="current-password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" name="new-password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-new-password">Confirm New Password</label>
+                            <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-secondary">Update Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 ChatApp. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - ChatApp</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <img id="user-avatar" src="/placeholder.svg?height=40&width=40" alt="Your avatar">
+                </div>
+                <div class="user-info">
+                    <h3 id="user-name">Loading...</h3>
+                    <span class="status online">Online</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h4>Active Users</h4>
+                <ul id="active-users" class="user-list">
+                    <!-- Active users will be populated here -->
+                    <li class="loading">Loading users...</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-actions">
+                <a href="profile.html" class="btn btn-secondary btn-sm">Profile</a>
+                <button id="logout-btn" class="btn btn-outline btn-sm">Logout</button>
+            </div>
+        </aside>
+        
+        <main class="chat-main">
+            <div class="chat-header">
+                <h2>Public Chat Room</h2>
+            </div>
+            
+            <div id="chat-messages" class="chat-messages">
+                <!-- Messages will be populated here -->
+                <div class="message-center">
+                    <p>Welcome to the chat room!</p>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <form id="message-form">
+                    <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
+
